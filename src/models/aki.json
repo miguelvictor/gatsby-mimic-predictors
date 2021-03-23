@@ -1,0 +1,111 @@
+{
+  "title": "AKI here",
+  "config": {
+    "nFeatures": 16,
+    "nDays": 8
+  },
+  "features": [
+    {
+      "identifier": "bicarbonate",
+      "label": "碳酸氢盐",
+      "unit": "mEq/L"
+    },
+    {
+      "identifier": "BUN",
+      "label": "血尿素氮",
+      "unit": "mg/dL"
+    },
+    {
+      "identifier": "chloride",
+      "label": "氯化物",
+      "unit": "mEq/L"
+    },
+    {
+      "identifier": "creatinine",
+      "label": "肌酸酐",
+      "unit": "mg/dL"
+    },
+    {
+      "identifier": "glucose",
+      "label": "葡萄糖",
+      "unit": "mg/dL"
+    },
+    {
+      "identifier": "height",
+      "label": "身高",
+      "unit": "cm"
+    },
+    {
+      "identifier": "hemoglobin",
+      "label": "血红蛋白",
+      "unit": "g/dL"
+    },
+    {
+      "identifier": "magnesium",
+      "label": "镁",
+      "unit": "mg/dL"
+    },
+    {
+      "identifier": "platelets",
+      "label": "血小板",
+      "unit": "K/uL"
+    },
+    {
+      "identifier": "potassium",
+      "label": "钾",
+      "unit": "mEq/L"
+    },
+    {
+      "identifier": "sodium",
+      "label": "钠",
+      "unit": "mEq/L"
+    },
+    {
+      "identifier": "WBCs",
+      "label": "白细胞",
+      "unit": "K/uL"
+    },
+    {
+      "identifier": "weight",
+      "label": "体重",
+      "unit": "kg"
+    },
+    {
+      "identifier": "age",
+      "label": "年龄",
+      "unit": null
+    },
+    {
+      "identifier": "gender",
+      "label": "性别",
+      "unit": null
+    },
+    {
+      "identifier": "black",
+      "label": "是否黑人",
+      "unit": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "实验结果",
+      "features": [
+        "bicarbonate",
+        "chloride",
+        "creatinine",
+        "glucose",
+        "magnesium",
+        "potassium",
+        "sodium",
+        "BUN",
+        "hemoglobin",
+        "platelets",
+        "WBCs"
+      ]
+    },
+    {
+      "label": "个人信息",
+      "features": ["gender", "age", "weight", "height", "black"]
+    }
+  ]
+}

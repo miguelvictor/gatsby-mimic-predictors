@@ -1,0 +1,1494 @@
+{
+  "title": "Sepsis here",
+  "config": {
+    "nFeatures": 225,
+    "nDays": 14
+  },
+  "features": [
+    {
+      "identifier": "bun",
+      "label": "血尿素氮",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "hdl",
+      "label": "高密度脂蛋白",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "inr",
+      "label": "国际标准化",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "inspired o2 fraction",
+      "label": "吸入氧气分率",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ldl",
+      "label": "低密度脂蛋白",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "peep set",
+      "label": "呼气终末正压",
+      "unit": "cmH2O",
+      "aggregateType": null
+    },
+    {
+      "identifier": "ptt",
+      "label": "凝血激活酶时间",
+      "unit": "sec",
+      "aggregateType": null
+    },
+    {
+      "identifier": "rbcs",
+      "label": "红细胞",
+      "unit": "/mic l",
+      "aggregateType": null
+    },
+    {
+      "identifier": "wbcs",
+      "label": "白细胞",
+      "unit": "K/uL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "anion gap",
+      "label": "阴离子隙",
+      "unit": "mEq/L",
+      "aggregateType": null
+    },
+    {
+      "identifier": "atypical lymphocytes",
+      "label": "异型淋巴细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "bands",
+      "label": "带状的中性粒细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "basophils",
+      "label": "嗜碱粒细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "blood culture",
+      "label": "血培养",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "central venous pressure",
+      "label": "中心静脉压",
+      "unit": "mmHg",
+      "aggregateType": null
+    },
+    {
+      "identifier": "chloride",
+      "label": "氯化物",
+      "unit": "mEq/L",
+      "aggregateType": null
+    },
+    {
+      "identifier": "creatinine",
+      "label": "肌酸酐",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "daily weight",
+      "label": "体重",
+      "unit": "kg",
+      "aggregateType": null
+    },
+    {
+      "identifier": "diabetes",
+      "label": "有无糖尿病",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "diastolic",
+      "label": "舒张压",
+      "unit": "mmHg",
+      "aggregateType": null
+    },
+    {
+      "identifier": "eosinophils",
+      "label": "嗜酸细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "glucose",
+      "label": "糖分",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "heart rate",
+      "label": "心率",
+      "unit": "bpm",
+      "aggregateType": null
+    },
+    {
+      "identifier": "hemocrit",
+      "label": "细胞压积",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "hemoglobin",
+      "label": "血红蛋白",
+      "unit": "g/dl",
+      "aggregateType": null
+    },
+    {
+      "identifier": "lymphocytes",
+      "label": "淋巴细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "monocytes",
+      "label": "单核细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "neutrophils",
+      "label": "中性白细胞",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "platelets",
+      "label": "血小板",
+      "unit": "K/uL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "polymorphonuclear leukocytes",
+      "label": "多形核白细胞",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "potassium_x",
+      "label": "钾",
+      "unit": "mEq/L",
+      "aggregateType": null
+    },
+    {
+      "identifier": "pulse oximetry",
+      "label": "脉搏血氧饱和度",
+      "unit": "%",
+      "aggregateType": null
+    },
+    {
+      "identifier": "respiratory rate",
+      "label": "呼吸频率",
+      "unit": "insp/min",
+      "aggregateType": null
+    },
+    {
+      "identifier": "sodium",
+      "label": "钠",
+      "unit": "mEq/L",
+      "aggregateType": null
+    },
+    {
+      "identifier": "systolic",
+      "label": "收缩压",
+      "unit": "mmHg",
+      "aggregateType": null
+    },
+    {
+      "identifier": "temperature",
+      "label": "体温",
+      "unit": "℃",
+      "aggregateType": null
+    },
+    {
+      "identifier": "tidal volume",
+      "label": "潮气量",
+      "unit": "mL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "tobacco",
+      "label": "是否抽烟",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "triglycerides",
+      "label": "甘油三酸酯",
+      "unit": "mg/dL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "troponin",
+      "label": "肌钙蛋白",
+      "unit": "ng/mL",
+      "aggregateType": null
+    },
+    {
+      "identifier": "bun_std",
+      "label": "血尿素氮",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "hdl_std",
+      "label": "高密度脂蛋白",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "inr_std",
+      "label": "国际标准化",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "inspired o2 fraction_std",
+      "label": "吸入氧气分率",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "ldl_std",
+      "label": "低密度脂蛋白",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "peep set_std",
+      "label": "呼气终末正压",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "ptt_std",
+      "label": "凝血激活酶时间",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "rbcs_std",
+      "label": "红细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "wbcs_std",
+      "label": "白细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "anion gap_std",
+      "label": "阴离子间隙",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "atypical lymphocytes_std",
+      "label": "异型淋巴细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "bands_std",
+      "label": "带状的中性粒细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "basophils_std",
+      "label": "嗜碱粒细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "central venous pressure_std",
+      "label": "中心静脉压",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "chloride_std",
+      "label": "氯化物",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "creatinine_std",
+      "label": "肌酸酐",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "diastolic_std",
+      "label": "舒张压",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "eosinophils_std",
+      "label": "嗜酸细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "glucose_std",
+      "label": "糖分",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "heart rate_std",
+      "label": "心率",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "hemocrit_std",
+      "label": "细胞压积",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "hemoglobin_std",
+      "label": "血红蛋白",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "lymphocytes_std",
+      "label": "淋巴细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "monocytes_std",
+      "label": "单核细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "neutrophils_std",
+      "label": "中性白细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "platelets_std",
+      "label": "血小板",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "polymorphonuclear leukocytes_std",
+      "label": "多形核白细胞",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "potassium_std",
+      "label": "钾",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "pulse oximetry_std",
+      "label": "脉搏血氧饱和度",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "respiratory rate_std",
+      "label": "呼吸频率",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "sodium_std",
+      "label": "钠",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "systolic_std",
+      "label": "收缩压",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "temperature_std",
+      "label": "体温",
+      "unit": "℃",
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "tidal volume_std",
+      "label": "潮气量",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "triglycerides_std",
+      "label": "甘油三酸酯",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "troponin_std",
+      "label": "肌钙蛋白",
+      "unit": null,
+      "aggregateType": "std"
+    },
+    {
+      "identifier": "bun_min",
+      "label": "血尿素氮",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "hdl_min",
+      "label": "高密度脂蛋白",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "inr_min",
+      "label": "国际标准化",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "inspired o2 fraction_min",
+      "label": "吸入氧气分率",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "ldl_min",
+      "label": "低密度脂蛋白",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "peep set_min",
+      "label": "呼气终末正压",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "ptt_min",
+      "label": "凝血激活酶时间",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "rbcs_min",
+      "label": "红细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "wbcs_min",
+      "label": "白细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "anion gap_min",
+      "label": "阴离子隙",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "atypical lymphocytes_min",
+      "label": "异型淋巴细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "bands_min",
+      "label": "带状的中性粒细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "basophils_min",
+      "label": "嗜碱粒细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "central venous pressure_min",
+      "label": "中心静脉压",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "chloride_min",
+      "label": "氯化物",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "creatinine_min",
+      "label": "肌酸酐",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "diastolic_min",
+      "label": "舒张压",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "eosinophils_min",
+      "label": "嗜酸细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "glucose_min",
+      "label": "糖分",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "heart rate_min",
+      "label": "心率",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "hemocrit_min",
+      "label": "细胞压积",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "hemoglobin_min",
+      "label": "血红蛋白",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "lymphocytes_min",
+      "label": "淋巴细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "monocytes_min",
+      "label": "单核细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "neutrophils_min",
+      "label": "中性白细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "platelets_min",
+      "label": "血小板",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "polymorphonuclear leukocytes_min",
+      "label": "多形核白细胞",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "potassium_min",
+      "label": "钾",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "pulse oximetry_min",
+      "label": "脉搏血氧饱和度",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "respiratory rate_min",
+      "label": "呼吸频率",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "sodium_min",
+      "label": "钠",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "systolic_min",
+      "label": "收缩压",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "temperature_min",
+      "label": "体温",
+      "unit": "℃",
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "tidal volume_min",
+      "label": "潮气量",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "triglycerides_min",
+      "label": "甘油三酸酯",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "troponin_min",
+      "label": "肌钙蛋白",
+      "unit": null,
+      "aggregateType": "min"
+    },
+    {
+      "identifier": "bun_max",
+      "label": "血尿素氮",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "hdl_max",
+      "label": "高密度脂蛋白",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "inr_max",
+      "label": "国际标准化",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "inspired o2 fraction_max",
+      "label": "吸入氧气分率",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "ldl_max",
+      "label": "低密度脂蛋白",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "peep set_max",
+      "label": "呼气终末正压",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "ptt_max",
+      "label": "凝血激活酶时间",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "rbcs_max",
+      "label": "红细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "wbcs_max",
+      "label": "白细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "anion gap_max",
+      "label": "阴离子隙",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "atypical lymphocytes_max",
+      "label": "异型淋巴细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "bands_max",
+      "label": "带状的中性粒细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "basophils_max",
+      "label": "嗜碱粒细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "central venous pressure_max",
+      "label": "中心静脉压",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "chloride_max",
+      "label": "氯化物",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "creatinine_max",
+      "label": "肌酸酐",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "diastolic_max",
+      "label": "舒张压",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "eosinophils_max",
+      "label": "嗜酸细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "glucose_max",
+      "label": "糖分",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "heart rate_max",
+      "label": "心率",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "hemocrit_max",
+      "label": "细胞压积",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "hemoglobin_max",
+      "label": "血红蛋白",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "lymphocytes_max",
+      "label": "淋巴细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "monocytes_max",
+      "label": "单核细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "neutrophils_max",
+      "label": "中性白细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "platelets_max",
+      "label": "血小板",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "polymorphonuclear leukocytes_max",
+      "label": "多形核白细胞",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "potassium_max",
+      "label": "钾",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "pulse oximetry_max",
+      "label": "脉搏血氧饱和度",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "respiratory rate_max",
+      "label": "呼吸频率",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "sodium_max",
+      "label": "钠",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "systolic_max",
+      "label": "收缩压",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "temperature_max",
+      "label": "体温",
+      "unit": "℃",
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "tidal volume_max",
+      "label": "潮气量",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "triglycerides_max",
+      "label": "甘油三酸酯",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "troponin_max",
+      "label": "肌钙蛋白",
+      "unit": null,
+      "aggregateType": "max"
+    },
+    {
+      "identifier": "black",
+      "label": "是否黑人",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "age",
+      "label": "年龄",
+      "unit": null,
+      "aggregateType": null
+    },
+    { "identifier": "m", "label": "性别", "unit": null, "aggregateType": null },
+    {
+      "identifier": "0.9% sodium chloride",
+      "label": "氯化钠",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "smx-tmp",
+      "label": "甲氧苄啶",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "acetominophen",
+      "label": "乙酰氨基酚",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "albuterol",
+      "label": "舒喘灵",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "amiodarone",
+      "label": "乙胺碘酰酮",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "amoxicillin",
+      "label": "阿莫西林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ampicillin-sulbactam",
+      "label": "舒巴坦钠",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "asprin",
+      "label": "阿司匹林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "atenolol",
+      "label": "阿替洛尔",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "atropine",
+      "label": "阿托品",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "calcium gluconate",
+      "label": "葡萄糖酸钙",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "captopril",
+      "label": "卡托普利",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "carvedilol",
+      "label": "卡维地洛",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "cefazolin",
+      "label": "头孢唑啉",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "cefepime",
+      "label": "头孢吡肟",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ceftriaxone",
+      "label": "头孢曲松",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "clonazepam",
+      "label": "氯硝安定",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "clopidogrel",
+      "label": "氯吡格雷",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "dextrose",
+      "label": "右旋糖",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "diazepam",
+      "label": "苯甲二氮䓬",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "digoxin(?!.*fab)",
+      "label": "地高辛",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "diltiazem",
+      "label": "地尔硫䓬",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "diphenhydramine",
+      "label": "盐酸苯海拉明",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "enoxaparin",
+      "label": "依诺肝素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "epoetin",
+      "label": "阿法依泊汀",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "fentanyl",
+      "label": "芬太尼",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "fentanyl citrate",
+      "label": "芬太奴柠檬酸",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "fluconazole",
+      "label": "氟康唑",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "fondaparinux",
+      "label": "磺达肝癸钠",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "furosemide",
+      "label": "呋塞米",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "glucagon",
+      "label": "胰高血糖素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "haloperidol",
+      "label": "氟哌啶醇",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "heparin",
+      "label": "肝素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "hydralazine",
+      "label": "肼苯哒嗪",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "hydrochlorothiazide",
+      "label": "氢氯噻嗪",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "hydromorphone",
+      "label": "氢吗啡酮",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "insulin",
+      "label": "胰岛素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ipratropium",
+      "label": "异丙托溴铵",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "labetalol",
+      "label": "拉贝洛尔",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "levetiracetam",
+      "label": "左乙拉西坦",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "levofloxacin",
+      "label": "左氧氟沙星",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "levothyroxine",
+      "label": "左旋甲状腺素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "lisinopril",
+      "label": "赖诺普利",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "magensium sulfate",
+      "label": "硫酸镁;",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "meropenem",
+      "label": "美罗培南",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "metoclopramide",
+      "label": "甲氧氯普胺",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "metoprolol",
+      "label": "美托洛尔",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "metronidazole",
+      "label": "甲硝哒",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "midazolam",
+      "label": "咪达唑仑",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "nafcillin",
+      "label": "萘夫西林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "neostigmine",
+      "label": "新斯的明",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "nitroglycerin",
+      "label": "硝化甘油",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "nitroprusside",
+      "label": "硝普盐",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "norepinephrine",
+      "label": "新肾上腺素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ondansetron",
+      "label": "昂丹司琼",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "oxacillin",
+      "label": "苯唑西林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "oxycodone",
+      "label": "氧可酮",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "pantoprazole",
+      "label": "泮托拉唑",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "penicillin",
+      "label": "青霉素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "phenylephrine",
+      "label": "苯福林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "phenytoin",
+      "label": "苯妥英",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "phytonadione",
+      "label": "叶绿醌",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "piperacillin",
+      "label": "氧哌嗪青霉素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "potassium_y",
+      "label": "钾",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "prednisone",
+      "label": "泼尼松",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "propofol",
+      "label": "二异丙酚",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "ranitidine",
+      "label": "雷米替丁",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "statin",
+      "label": "抑制素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "tacrolimus",
+      "label": "他克莫司",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "trazodone",
+      "label": "曲唑酮",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "vancomycin",
+      "label": "万古霉素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "vasopressin",
+      "label": "血管加压素",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "warfarin",
+      "label": "华法林",
+      "unit": null,
+      "aggregateType": null
+    },
+    {
+      "identifier": "zolpidem",
+      "label": "唑吡旦",
+      "unit": null,
+      "aggregateType": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "个人信息",
+      "features": ["age", "m", "black", "daily weight", "tobacco", "diabetes"]
+    },
+    {
+      "label": "主要生命体征",
+      "features": [
+        "temperature",
+        "heart rate",
+        "respiratory rate",
+        "systolic",
+        "diastolic",
+        "pulse oximetry",
+        "troponin"
+      ]
+    },
+    {
+      "label": "血常规",
+      "features": [
+        "rbcs",
+        "wbcs",
+        "platelets",
+        "hemoglobin",
+        "hemocrit",
+        "atypical lymphocytes",
+        "bands",
+        "basophils",
+        "eosinophils",
+        "neutrophils",
+        "lymphocytes",
+        "monocytes",
+        "polymorphonuclear leukocytes"
+      ]
+    },
+    {
+      "label": "实验数据",
+      "features": [
+        "hdl",
+        "ldl",
+        "bun",
+        "inr",
+        "ptt",
+        "triglycerides",
+        "creatinine",
+        "glucose",
+        "sodium",
+        "potassium_x",
+        "chloride",
+        "chloride_min",
+        "chloride_max",
+        "chloride_std",
+        "blood culture",
+        "inspired o2 fraction",
+        "central venous pressure",
+        "peep set",
+        "tidal volume",
+        "anion gap"
+      ]
+    },
+    {
+      "label": "药物",
+      "features": [
+        "epoetin",
+        "warfarin",
+        "heparin",
+        "enoxaparin",
+        "fondaparinux",
+        "asprin",
+        "acetominophen",
+        "insulin",
+        "glucagon",
+        "potassium_y",
+        "calcium gluconate",
+        "fentanyl",
+        "magensium sulfate",
+        "dextrose",
+        "ranitidine",
+        "ondansetron",
+        "pantoprazole",
+        "metoclopramide",
+        "lisinopril",
+        "captopril",
+        "statin",
+        "hydralazine",
+        "diltiazem",
+        "carvedilol",
+        "metoprolol",
+        "labetalol",
+        "atenolol",
+        "amiodarone",
+        "digoxin(?!.*fab)",
+        "clopidogrel",
+        "nitroprusside",
+        "nitroglycerin",
+        "vasopressin",
+        "hydrochlorothiazide",
+        "furosemide",
+        "atropine",
+        "neostigmine",
+        "levothyroxine",
+        "oxycodone",
+        "hydromorphone",
+        "fentanyl citrate",
+        "tacrolimus",
+        "prednisone",
+        "phenylephrine",
+        "norepinephrine",
+        "haloperidol",
+        "phenytoin",
+        "trazodone",
+        "levetiracetam",
+        "diazepam",
+        "clonazepam",
+        "propofol",
+        "zolpidem",
+        "midazolam",
+        "albuterol",
+        "ipratropium",
+        "diphenhydramine",
+        "0.9% sodium chloride",
+        "phytonadione",
+        "metronidazole",
+        "cefazolin",
+        "cefepime",
+        "vancomycin",
+        "levofloxacin",
+        "fluconazole",
+        "meropenem",
+        "ceftriaxone",
+        "piperacillin",
+        "ampicillin-sulbactam",
+        "nafcillin",
+        "oxacillin",
+        "amoxicillin",
+        "penicillin",
+        "smx-tmp"
+      ]
+    }
+  ]
+}
