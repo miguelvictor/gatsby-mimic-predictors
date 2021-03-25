@@ -78,12 +78,14 @@
     {
       "identifier": "gender",
       "label": "性别",
-      "unit": null
+      "unit": null,
+      "formatting": "gender"
     },
     {
       "identifier": "black",
       "label": "是否黑人",
-      "unit": null
+      "unit": null,
+      "formatting": "being"
     }
   ],
   "groups": [

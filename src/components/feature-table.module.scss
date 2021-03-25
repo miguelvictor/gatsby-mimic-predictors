@@ -5,7 +5,11 @@
 
   & td,
   & th {
-    padding: 0;
+    padding: 2px;
+
+    &:not(:empty) {
+      border-bottom: 1px solid #ccc;
+    }
   }
 
   & .dayHeader,
@@ -21,4 +25,16 @@
 
 .unit {
   color: #ff4081;
+}
+
+.value {
+  width: 50px;
+  cursor: pointer;
+  user-select: none;
+
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -ms-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }

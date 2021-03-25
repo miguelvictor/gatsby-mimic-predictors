@@ -1,11 +1,26 @@
 const path = require("path")
 const fs = require("fs")
+const dotenv = require("dotenv")
 const mapping = require("./generate-mapping")
+
+exports.onCreateWebpackConfig = ({ actions, plugins }) => {
+  const activeEnv =
+    process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+  const env = dotenv.config({ path: `.env.${activeEnv}` }).parsed
+  const envKV = Object.keys(env).reduce((prev, next) => {
+    prev[`process.env.${next}`] = JSON.stringify(env[next])
+    return prev
+  }, {})
+
+  actions.setWebpackConfig({
+    plugins: [plugins.define(envKV)],
+  })
+}
 
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
   const jsonPagesDir = "./src/models/"
-  const template = path.resolve("./src/templates/predictor.js")
+  const template = path.resolve("./src/templates/predictor.jsx")
 
   fs.readdirSync(jsonPagesDir)
     .filter(jsonFile => {
@@ -21,7 +36,13 @@ exports.createPages = async ({ actions }) => {
       const pageAsJson = JSON.parse(fs.readFileSync(fullPath), "utf8")
       const features = mapping.generateMappings(pageAsJson)
       const { title, config } = pageAsJson
-      const context = { title, config, features, isPredictorModel: true }
+      const context = {
+        id: pagePath,
+        isPredictorModel: true,
+        title,
+        config,
+        features,
+      }
 
       return [pagePath, context]
     })

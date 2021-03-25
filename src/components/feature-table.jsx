@@ -1,15 +1,17 @@
 import * as React from "react"
-import { useState } from "react"
+import { useMemo } from "react"
 import PropTypes from "prop-types"
 
 import * as featureTableStyles from "./feature-table.module.scss"
+import { range } from "../utils"
+import { format } from "../formatter"
 
-const range = n => [...Array(n).keys()]
-
-const FeatureTable = ({ nDays, nFeatures, features }) => {
-  // all about state stuff
-  const initialData = Array(nDays).fill(Array(nFeatures).fill(3))
-  const [featureValues, setFeatureValues] = useState(initialData)
+const FeatureTable = ({ nDays, features, values, weights }) => {
+  // format feature values
+  const formattedValues = useMemo(() => format(features, values), [
+    features,
+    values,
+  ])
 
   // subcomponents
   const dayLabels = range(nDays).map(day => (
@@ -18,10 +20,22 @@ const FeatureTable = ({ nDays, nFeatures, features }) => {
     </td>
   ))
   const featureRows = features.map((feature, featureIndex) => {
-    const { id, identifier, label, groupLabel, unit, aggregateType } = feature
-    const values = range(nDays).map(day => {
+    const { id, identifier, label, groupLabel, unit } = feature
+    const featureValueCells = range(nDays).map(day => {
       const cellKey = featureIndex + "-" + day
-      return <td key={cellKey}>{featureValues[day][id]}</td>
+      const weightedBg = `rgba(33, 150, 243, ${weights[day][id]})`
+      const tdStyles = { backgroundColor: weightedBg }
+
+      return (
+        <td
+          key={cellKey}
+          style={tdStyles}
+          className={featureTableStyles.value}
+          title={values[day][id]}
+        >
+          {formattedValues[day][id]}
+        </td>
+      )
     })
 
     return (
@@ -31,7 +45,7 @@ const FeatureTable = ({ nDays, nFeatures, features }) => {
           {label}&nbsp;
           <span className={featureTableStyles.unit}>{unit}</span>
         </td>
-        {values}
+        {featureValueCells}
       </tr>
     )
   })
