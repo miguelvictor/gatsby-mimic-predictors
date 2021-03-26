@@ -1,5 +1,5 @@
 {
-  "title": "MI here",
+  "title": "心肌梗塞",
   "config": {
     "nFeatures": 221,
     "nDays": 14
@@ -886,7 +886,8 @@
       "identifier": "0.9% sodium chloride",
       "label": "氯化钠",
       "unit": null,
-      "aggregateType": null
+      "aggregateType": null,
+      "formatting": "gender"
     },
     {
       "identifier": "smx-tmp",
