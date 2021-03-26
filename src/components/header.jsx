@@ -11,9 +11,6 @@ import MenuItem from "@material-ui/core/MenuItem"
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
 
 const useStyles = makeStyles(() => ({
-  root: {
-    flexGrow: 1,
-  },
   spacer: {
     flexGrow: 1,
   },
@@ -45,37 +42,35 @@ const Header = () => {
   const handleCloseMenu = () => setAnchorEl(null)
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <StaticImage
-            src="../images/project-logo.png"
-            width={250}
-            quality={40}
-            formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Logo"
-          />
-          <div className={classes.spacer}></div>
-          <Button onClick={() => navigate("/patients")}>病人表</Button>
-          <Button
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleOpenMenu}
-          >
-            预测疾病模型
-            <ArrowDropDownIcon />
-          </Button>
-          <Menu
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleCloseMenu}
-          >
-            {modelLinks}
-          </Menu>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position="static">
+      <Toolbar>
+        <StaticImage
+          src="../images/project-logo.png"
+          width={250}
+          quality={40}
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="Logo"
+        />
+        <div className={classes.spacer}></div>
+        <Button onClick={() => navigate("/patients")}>病人表</Button>
+        <Button
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleOpenMenu}
+        >
+          预测疾病模型
+          <ArrowDropDownIcon />
+        </Button>
+        <Menu
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleCloseMenu}
+        >
+          {modelLinks}
+        </Menu>
+      </Toolbar>
+    </AppBar>
   )
 }
 

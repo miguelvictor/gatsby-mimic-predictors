@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FeatureTable from "../components/feature-table"
 import ModelOperations from "../components/model-operations"
-import * as predictorStyles from "./predictor.module.scss"
 
 import { loadSample, predict } from "../api"
 import { zeros1d, zeros2d } from "../utils"
@@ -64,22 +63,21 @@ const PredictorTemplate = props => {
   return (
     <Layout>
       <SEO title={title}></SEO>
-      <div className={predictorStyles.container}>
-        <FeatureTable
-          nDays={nDays}
-          nFeatures={nFeatures}
-          features={features}
-          values={values}
-          weights={weights}
-        ></FeatureTable>
-        <ModelOperations
-          predictions={predictions}
-          loadSampleFunc={loadSampleFunc}
-          resetValuesFunc={resetValuesFunc}
-          predictFunc={predictFunc}
-          disabled={isLoading}
-        />
-      </div>
+      <ModelOperations
+        title={title}
+        predictions={predictions}
+        loadSampleFunc={loadSampleFunc}
+        resetValuesFunc={resetValuesFunc}
+        predictFunc={predictFunc}
+        disabled={isLoading}
+      />
+      <FeatureTable
+        nDays={nDays}
+        nFeatures={nFeatures}
+        features={features}
+        values={values}
+        weights={weights}
+      ></FeatureTable>
     </Layout>
   )
 }

@@ -36,8 +36,10 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="main-container">{children}</main>
+      <div className="main-container">
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main className="main">{children}</main>
+      </div>
     </ThemeProvider>
   )
 }

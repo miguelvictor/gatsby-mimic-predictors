@@ -1,11 +1,14 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+
 import { VictoryChart, VictoryLine, VictoryTheme } from "victory"
+import Button from "@material-ui/core/Button"
 
 import * as modelOperationsStyles from "./model-operations.module.scss"
 
 const ModelOperations = props => {
   const {
+    title,
     predictions,
     loadSampleFunc,
     resetValuesFunc,
@@ -17,25 +20,7 @@ const ModelOperations = props => {
 
   return (
     <div className={modelOperationsStyles.container}>
-      <div className={modelOperationsStyles.buttons}>
-        <button className="button" onClick={loadSampleFunc} disabled={disabled}>
-          加载示例
-        </button>
-        <button
-          className="button"
-          onClick={resetValuesFunc}
-          disabled={disabled}
-        >
-          重置
-        </button>
-        <button
-          className="button is-primary"
-          onClick={predictFunc}
-          disabled={disabled}
-        >
-          预测
-        </button>
-      </div>
+      <h1 className={modelOperationsStyles.title}>{title}</h1>
       <VictoryChart
         width={500}
         height={350}
@@ -56,11 +41,32 @@ const ModelOperations = props => {
           }}
         />
       </VictoryChart>
+      <div className={modelOperationsStyles.buttons}>
+        <Button variant="outlined" onClick={loadSampleFunc} disabled={disabled}>
+          加载示例
+        </Button>
+        <Button
+          variant="outlined"
+          onClick={resetValuesFunc}
+          disabled={disabled}
+        >
+          重置
+        </Button>
+        <Button
+          variant="outlined"
+          color="secondary"
+          onClick={predictFunc}
+          disabled={disabled}
+        >
+          预测
+        </Button>
+      </div>
     </div>
   )
 }
 
 ModelOperations.propTypes = {
+  title: PropTypes.string.isRequired,
   predictions: PropTypes.arrayOf(PropTypes.number.isRequired),
   loadSampleFunc: PropTypes.func.isRequired,
   resetValuesFunc: PropTypes.func.isRequired,
