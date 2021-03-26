@@ -1,9 +1,26 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => {
+import { makeStyles } from "@material-ui/core/styles"
+import AppBar from "@material-ui/core/AppBar"
+import Toolbar from "@material-ui/core/Toolbar"
+import Button from "@material-ui/core/Button"
+import Menu from "@material-ui/core/Menu"
+import MenuItem from "@material-ui/core/MenuItem"
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
+
+const useStyles = makeStyles(() => ({
+  root: {
+    flexGrow: 1,
+  },
+  spacer: {
+    flexGrow: 1,
+  },
+}))
+
+const Header = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null)
   const data = useStaticQuery(graphql`
     query ModelLinksQuery {
       allSitePage(filter: { context: { isPredictorModel: { eq: true } } }) {
@@ -19,19 +36,18 @@ const Header = ({ siteTitle }) => {
     }
   `)
   const modelLinks = data.allSitePage.edges.map(({ node }) => (
-    <Link key={node.path} to={node.path} className="navbar-item">
+    <MenuItem key={node.path} onClick={() => navigate(node.path)}>
       {node.context.title}
-    </Link>
+    </MenuItem>
   ))
+  const classes = useStyles()
+  const handleOpenMenu = event => setAnchorEl(event.currentTarget)
+  const handleCloseMenu = () => setAnchorEl(null)
 
   return (
-    <nav
-      className="navbar has-shadow"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
           <StaticImage
             src="../images/project-logo.png"
             width={250}
@@ -39,36 +55,28 @@ const Header = ({ siteTitle }) => {
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Logo"
           />
-        </a>
-      </div>
-      <div className="navbar-end">
-        <Link className="navbar-item" to="/patients">
-          病人表
-        </Link>
-        <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link" href="#">
+          <div className={classes.spacer}></div>
+          <Button onClick={() => navigate("/patients")}>病人表</Button>
+          <Button
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleOpenMenu}
+          >
             预测疾病模型
-          </a>
-
-          <div className="navbar-dropdown is-right">
+            <ArrowDropDownIcon />
+          </Button>
+          <Menu
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleCloseMenu}
+          >
             {modelLinks}
-            <hr className="navbar-divider" />
-            <a className="navbar-item" href="#">
-              怎么添加新的模型
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+          </Menu>
+        </Toolbar>
+      </AppBar>
+    </div>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
