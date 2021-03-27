@@ -54,7 +54,7 @@ const ModelOperations = props => {
         </Button>
         <Button
           variant="outlined"
-          color="secondary"
+          color="primary"
           onClick={predictFunc}
           disabled={disabled}
         >

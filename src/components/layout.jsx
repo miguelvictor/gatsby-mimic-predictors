@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
-import { grey } from "@material-ui/core/colors"
+import { grey, blue } from "@material-ui/core/colors"
 
 import Header from "./header"
 import "./layout.scss"
@@ -18,6 +18,9 @@ import "./layout.scss"
 const theme = createMuiTheme({
   palette: {
     primary: {
+      main: blue[500],
+    },
+    secondary: {
       main: grey[100],
     },
   },

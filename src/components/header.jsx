@@ -42,7 +42,7 @@ const Header = () => {
   const handleCloseMenu = () => setAnchorEl(null)
 
   return (
-    <AppBar position="static">
+    <AppBar color="secondary" position="static">
       <Toolbar>
         <StaticImage
           src="../images/project-logo.png"
