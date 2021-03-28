@@ -51,10 +51,10 @@ const PredictorTemplate = props => {
     if (isLoading) return
     setIsLoading(true)
 
-    const { predictions, weights } = await predict(id, "gpt2", values, nDays)
+    const { predictions, weights: w } = await predict(id, "gpt2", values, nDays)
     if (isMounted.current) {
       setPredictions(predictions)
-      setWeights(weights)
+      setWeights(w)
       setIsLoading(false)
     }
   }, [id, isLoading, nDays, values])

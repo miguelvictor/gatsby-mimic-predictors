@@ -6,6 +6,11 @@ body {
   background-color: #fafafa;
 }
 
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -14,7 +19,9 @@ body {
 
 .main {
   padding: 10px;
+  padding-right: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  flex: 1;
 }

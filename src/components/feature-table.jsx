@@ -1,8 +1,10 @@
 import * as React from "react"
-import { useMemo } from "react"
+import { useMemo, useCallback } from "react"
 import PropTypes from "prop-types"
 
-import * as featureTableStyles from "./feature-table.module.scss"
+import { AgGridColumn, AgGridReact } from "ag-grid-react"
+import "./feature-table.theme.scss"
+
 import { range } from "../utils"
 import { format } from "../formatter"
 
@@ -13,54 +15,112 @@ const FeatureTable = ({ nDays, features, values, weights }) => {
     values,
   ])
 
-  // subcomponents
-  const dayLabels = range(nDays).map(day => (
-    <td key={day} className={featureTableStyles.dayHeader}>
-      第{day + 1}天
-    </td>
-  ))
-  const featureRows = features.map((feature, featureIndex) => {
-    const { id, identifier, label, groupLabel, unit } = feature
-    const featureValueCells = range(nDays).map(day => {
-      const cellKey = featureIndex + "-" + day
-      const weightedBg = `rgba(33, 150, 243, ${weights[day][id]})`
-      const tdStyles = { backgroundColor: weightedBg }
+  // cell custom renderers
+  const labelRenderer = useCallback(
+    params => {
+      const { value, rowIndex } = params
+      const { unit } = features[rowIndex]
 
-      return (
-        <td
-          key={cellKey}
-          style={tdStyles}
-          className={featureTableStyles.value}
-          title={values[day][id]}
-        >
-          {formattedValues[day][id]}
-        </td>
-      )
+      return unit ? `${value}<span class="unit">${unit}</span>` : value
+    },
+    [features]
+  )
+  const valueRenderer = useCallback(params => {
+    const { value, eGridCell } = params
+    const { value: featureValue, weight } = value
+
+    if (weight > 0) {
+      eGridCell.style.backgroundColor = `rgba(33, 150, 243, ${weight})`
+    } else {
+      eGridCell.style.backgroundColor = null
+    }
+
+    return featureValue
+  }, [])
+
+  // column types definition
+  const columnTypes = useMemo(
+    () => ({
+      groupLabelColumn: {
+        width: 85,
+      },
+      labelColumn: {
+        width: 120,
+      },
+      valueColumn: {
+        width: 55,
+      },
+    }),
+    []
+  )
+  const domLayout = features.length <= 25 ? "autoHeight" : undefined
+  const widthOffset = nDays >= 14 ? 20 : 5
+  const dimensions = {
+    width:
+      columnTypes.groupLabelColumn.width +
+      columnTypes.labelColumn.width +
+      columnTypes.valueColumn.width * nDays +
+      widthOffset,
+    height: domLayout ? undefined : "100%",
+  }
+
+  // cell values
+  const dayColumns = useMemo(
+    () =>
+      range(nDays).map(day => (
+        <AgGridColumn
+          key={day}
+          headerName={`第${day + 1}天`}
+          field={`day${day}`}
+          type="valueColumn"
+          cellRenderer={valueRenderer}
+        />
+      )),
+    [nDays, valueRenderer]
+  )
+  const rowData = useMemo(() => {
+    console.log("new weights")
+    console.log(weights)
+    return features.map(feature => {
+      const { id, label, groupLabel } = feature
+      const dayValues = range(nDays)
+        .map(day => ({
+          [`day${day}`]: {
+            value: formattedValues[day][id],
+            weight: weights[day][id],
+          },
+        }))
+        .reduce((acc, val) => ({ ...acc, ...val }), {})
+
+      return { groupLabel, label, ...dayValues }
     })
-
-    return (
-      <tr key={identifier}>
-        <td className={featureTableStyles.header}>{groupLabel}</td>
-        <td className={featureTableStyles.label}>
-          {label}&nbsp;
-          <span className={featureTableStyles.unit}>{unit}</span>
-        </td>
-        {featureValueCells}
-      </tr>
-    )
-  })
+  }, [nDays, features, formattedValues, weights])
 
   return (
-    <table className={featureTableStyles.featureTable}>
-      <thead>
-        <tr>
-          <th>&nbsp;</th>
-          <th>&nbsp;</th>
-          {dayLabels}
-        </tr>
-      </thead>
-      <tbody>{featureRows}</tbody>
-    </table>
+    <div className="ag-theme-alpine" style={dimensions}>
+      <AgGridReact
+        columnTypes={columnTypes}
+        rowData={rowData}
+        domLayout={domLayout}
+        style={{
+          width: dimensions.width - widthOffset,
+          height: dimensions.height,
+        }}
+      >
+        <AgGridColumn
+          headerName=""
+          field="groupLabel"
+          type="groupLabelColumn"
+        />
+        <AgGridColumn
+          headerName=""
+          field="label"
+          type="labelColumn"
+          cellRenderer={labelRenderer}
+        />
+        {dayColumns}
+      </AgGridReact>
+    </div>
   )
 }
 

@@ -1,0 +1,28 @@
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin";
+
+.ag-theme-alpine {
+  @include ag-theme-alpine(
+    (
+      alpine-active-color: deeppink,
+      row-height: 22px,
+    )
+  );
+
+  .ag-cell {
+    font-size: 12px;
+    padding: 1px 5px;
+  }
+
+  .ag-header-cell {
+    padding: 1px;
+  }
+
+  .ag-row-hover {
+    background-color: transparent;
+  }
+
+  .unit {
+    color: #ff4081;
+  }
+}
