@@ -79,8 +79,6 @@ const FeatureTable = ({ nDays, features, values, weights }) => {
     [nDays, valueRenderer]
   )
   const rowData = useMemo(() => {
-    console.log("new weights")
-    console.log(weights)
     return features.map(feature => {
       const { id, label, groupLabel } = feature
       const dayValues = range(nDays)

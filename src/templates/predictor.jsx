@@ -23,6 +23,7 @@ const PredictorTemplate = props => {
   const [values, setValues] = useState(() => zeros2d(nDays, nFeatures))
   const [weights, setWeights] = useState(() => zeros2d(nDays, nFeatures))
   const [predictions, setPredictions] = useState(() => zeros1d(nDays))
+  const [model, setModel] = useState("gpt2")
 
   // set isMounted to false when we unmount the component
   useEffect(() => {
@@ -30,6 +31,9 @@ const PredictorTemplate = props => {
   }, [])
 
   // button callback functions definitions
+  const changeModelFunc = useCallback(event => {
+    setModel(event.target.value)
+  }, [])
   const loadSampleFunc = useCallback(async () => {
     if (isLoading) return
     setIsLoading(true)
@@ -51,13 +55,13 @@ const PredictorTemplate = props => {
     if (isLoading) return
     setIsLoading(true)
 
-    const { predictions, weights: w } = await predict(id, "gpt2", values, nDays)
+    const { predictions, weights: w } = await predict(id, model, values, nDays)
     if (isMounted.current) {
       setPredictions(predictions)
       setWeights(w)
       setIsLoading(false)
     }
-  }, [id, isLoading, nDays, values])
+  }, [id, isLoading, nDays, values, model])
 
   // rendering stuff
   return (
@@ -65,6 +69,8 @@ const PredictorTemplate = props => {
       <SEO title={title}></SEO>
       <ModelOperations
         title={title}
+        model={model}
+        changeModelFunc={changeModelFunc}
         predictions={predictions}
         loadSampleFunc={loadSampleFunc}
         resetValuesFunc={resetValuesFunc}

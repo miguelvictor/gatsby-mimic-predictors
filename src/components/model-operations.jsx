@@ -3,8 +3,12 @@ import PropTypes from "prop-types"
 
 import { VictoryChart, VictoryLine, VictoryTheme } from "victory"
 import Button from "@material-ui/core/Button"
+import Radio from "@material-ui/core/Radio"
+import RadioGroup from "@material-ui/core/RadioGroup"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import FormControl from "@material-ui/core/FormControl"
 
-import * as modelOperationsStyles from "./model-operations.module.scss"
+import * as styles from "./model-operations.module.scss"
 
 const ModelOperations = props => {
   const {
@@ -14,13 +18,15 @@ const ModelOperations = props => {
     resetValuesFunc,
     predictFunc,
     disabled,
+    model,
+    changeModelFunc,
   } = props
   const nDays = predictions.length
   const data = predictions.map((pred, i) => ({ x: i + 1, y: pred }))
 
   return (
-    <div className={modelOperationsStyles.container}>
-      <h1 className={modelOperationsStyles.title}>{title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
       <VictoryChart
         width={500}
         height={350}
@@ -41,7 +47,7 @@ const ModelOperations = props => {
           }}
         />
       </VictoryChart>
-      <div className={modelOperationsStyles.buttons}>
+      <div className={styles.buttons}>
         <Button variant="outlined" onClick={loadSampleFunc} disabled={disabled}>
           加载示例
         </Button>
@@ -61,6 +67,27 @@ const ModelOperations = props => {
           预测
         </Button>
       </div>
+      <div className={styles.modelChooser}>
+        <FormControl component="fieldset">
+          <RadioGroup
+            aria-label="model architecture"
+            name="architecture"
+            value={model}
+            onChange={changeModelFunc}
+          >
+            <FormControlLabel
+              value="gpt2"
+              control={<Radio color="primary" />}
+              label="GPT-2"
+            />
+            <FormControlLabel
+              value="lstm"
+              control={<Radio color="primary" />}
+              label="LSTM"
+            />
+          </RadioGroup>
+        </FormControl>
+      </div>
     </div>
   )
 }
@@ -72,6 +99,8 @@ ModelOperations.propTypes = {
   resetValuesFunc: PropTypes.func.isRequired,
   predictFunc: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
+  model: PropTypes.string.isRequired,
+  changeModelFunc: PropTypes.func.isRequired,
 }
 
 ModelOperations.defaultProps = {
