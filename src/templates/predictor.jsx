@@ -1,13 +1,13 @@
 import * as React from "react"
 import { useState, useEffect, useCallback, useRef } from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import FeatureTable from "../components/feature-table"
-import ModelOperations from "../components/model-operations"
+import Layout from "~core/layout"
+import SEO from "~core/seo"
+import FeatureTable from "~shared/feature-table"
+import ModelOperations from "~predictors/model-operations"
 
-import { loadSample, predict } from "../api"
-import { zeros1d, zeros2d } from "../utils"
+import { loadSample, predict } from "~root/api"
+import { zeros1d, zeros2d } from "~root/utils"
 
 const PredictorTemplate = props => {
   // extract needed data from props

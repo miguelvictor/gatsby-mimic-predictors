@@ -1,9 +1,8 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-import PatientsTable from "../components/patients/patients-table"
+import Layout from "~core/layout"
+import SEO from "~core/seo"
+import PatientsTable from "~patients/patients-table"
 
 const Wew = () => {
   return (

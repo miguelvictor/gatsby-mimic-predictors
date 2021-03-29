@@ -45,7 +45,7 @@ const Header = () => {
     <AppBar color="secondary" position="static">
       <Toolbar>
         <StaticImage
-          src="../images/project-logo.png"
+          src="../../images/project-logo.png"
           width={250}
           quality={40}
           formats={["AUTO", "WEBP", "AVIF"]}

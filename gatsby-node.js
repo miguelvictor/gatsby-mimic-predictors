@@ -14,6 +14,15 @@ exports.onCreateWebpackConfig = ({ actions, plugins }) => {
 
   actions.setWebpackConfig({
     plugins: [plugins.define(envKV)],
+    resolve: {
+      alias: {
+        "~root": path.resolve(__dirname, "src"),
+        "~core": path.resolve(__dirname, "src/components/core"),
+        "~patients": path.resolve(__dirname, "src/components/patients"),
+        "~predictors": path.resolve(__dirname, "src/components/predictors"),
+        "~shared": path.resolve(__dirname, "src/components/shared"),
+      },
+    },
   })
 }
 

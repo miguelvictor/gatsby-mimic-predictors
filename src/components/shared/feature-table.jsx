@@ -5,8 +5,8 @@ import PropTypes from "prop-types"
 import { AgGridColumn, AgGridReact } from "ag-grid-react"
 import "./feature-table.theme.scss"
 
-import { range } from "../utils"
-import { format } from "../formatter"
+import { range } from "~root/utils"
+import { format } from "~root/formatter"
 
 const FeatureTable = ({ nDays, features, values, weights }) => {
   // format feature values

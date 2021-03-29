@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button"
 import RefreshIcon from "@material-ui/icons/Refresh"
 import ControlPointIcon from "@material-ui/icons/ControlPoint"
 
-import { getPatients } from "../../api"
+import { getPatients } from "~root/api"
 
 import "ag-grid-community/dist/styles/ag-theme-material.css"
 import * as styles from "./patients-table.module.scss"
@@ -83,7 +83,7 @@ const PatientsTable = () => {
     } else if (!isLoading && patients.length !== 0) {
       agGridApi?.hideOverlay()
     }
-  }, [isLoading, agGridApi])
+  }, [isLoading, agGridApi, patients])
 
   // overlay templates
   const overlayLoading = `<span className="ag-overlay-loading-center">正在努力加载中...</span>`
