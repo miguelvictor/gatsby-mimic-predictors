@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~root": ["src"],
+      "~core": ["src/components/core"],
+      "~patients": ["src/components/patients"],
+      "~predictors": ["src/components/predictors"],
+      "~shared": ["src/components/shared"]
+    }
+  }
+}
