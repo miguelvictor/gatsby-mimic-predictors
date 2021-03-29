@@ -1,5 +1,9 @@
 .container {
   margin: 0 auto;
+  min-width: 720px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .spacer {
@@ -9,6 +13,11 @@
 .actions-container {
   display: flex;
   padding: 20px 0 12px;
+}
+
+.table-container {
+  width: 100%;
+  flex-grow: 1;
 }
 
 .table {

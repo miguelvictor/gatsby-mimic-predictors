@@ -100,6 +100,7 @@ const FeatureTable = ({ nDays, features, values, weights }) => {
         columnTypes={columnTypes}
         rowData={rowData}
         domLayout={domLayout}
+        suppressCellSelection={true}
         style={{
           width: dimensions.width - widthOffset,
           height: dimensions.height,

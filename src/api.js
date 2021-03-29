@@ -37,3 +37,11 @@ export async function predict(target, architecture, x, nDays = 14) {
 
   return data
 }
+
+export async function getPatients() {
+  const url = `${process.env.API_URL}/patients`
+  const response = await fetch(url)
+  const data = await response.json()
+
+  return data
+}
