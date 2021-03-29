@@ -44,6 +44,10 @@ const PatientsTable = () => {
       setIsLoading(false)
     }
   }, [])
+  const onPatientClicked = useCallback(
+    event => console.log(`Patient Clicked: ${event.data.id}`),
+    []
+  )
 
   // fetch the first batch of patients
   useEffect(
@@ -74,13 +78,16 @@ const PatientsTable = () => {
   useEffect(() => {
     if (isLoading) {
       agGridApi?.showLoadingOverlay()
-    } else {
+    } else if (patients.length === 0) {
+      agGridApi?.showNoRowsOverlay()
+    } else if (!isLoading && patients.length !== 0) {
       agGridApi?.hideOverlay()
     }
   }, [isLoading, agGridApi])
 
   // overlay templates
   const overlayLoading = `<span className="ag-overlay-loading-center">正在努力加载中...</span>`
+  const overlayEmpty = `<span>没有病人哎...</span>`
 
   return (
     <div className={styles.container}>
@@ -98,11 +105,15 @@ const PatientsTable = () => {
       <div className={`${styles.tableContainer} ag-theme-material`}>
         <AgGridReact
           overlayLoadingTemplate={overlayLoading}
-          rowData={patients}
+          overlayNoRowsTemplate={overlayEmpty}
+          suppressCellSelection={true}
+          pagination={true}
+          paginationPageSize={10}
           domLayout="autoHeight"
           onGridReady={onGridReady}
           style={{ width: "100%" }}
-          suppressCellSelection={true}
+          rowData={patients}
+          onRowClicked={onPatientClicked}
         >
           <AgGridColumn headerName="ID" field="id" />
           <AgGridColumn headerName="姓名" field="name" />
